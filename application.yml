@@ -1,4 +1,4 @@
-eureka: 
+eureka:
   client:
     register-with-eureka: true #从Eureka Server服务的列表只读备份，然后缓存在本地
     registry-fetch-interval-seconds: 5 #`每隔30秒`会重新获取并更新数据
@@ -6,9 +6,9 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
   instance:
     hostname: localhost
-    prefer-ip-address: true # 当调用getHostname获取实例的hostname时，返回ip而不是host名称
-    lease-expiration-duration-in-seconds: 10 # 10秒即过期
-    lease-renewal-interval-in-seconds: 5 # 5秒一次心跳
+    prefer-ip-address: true #当调用getHostname获取实例的hostname时，返回ip而不是host名称
+    lease-expiration-duration-in-seconds: 10#10秒即过期
+    lease-renewal-interval-in-seconds: 5#5秒一次心跳
 
 feign:
   hystrix:
@@ -28,7 +28,7 @@ spring:
   cloud:
     config:
       uri: http://localhost:8888
-      fail-fast: true # 即在获取不到远程配置时，立即失败，但是用下边的配置进行重试
+      fail-fast: true #即在获取不到远程配置时，立即失败，但是用下边的配置进行重试
       retry:
         initial-interval: 2000 #最初重试间隔为 1000 毫秒
         max-interval: 10000 #最长重试间隔为 2000 毫秒
