@@ -1,8 +1,10 @@
-eureka:
-  client:
+
+
+eureka: 
+  client: 
     register-with-eureka: true #从Eureka Server服务的列表只读备份，然后缓存在本地
     registry-fetch-interval-seconds: 5 #`每隔30秒`会重新获取并更新数据
-    service-url:
+    service-url: 
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
   instance:
     hostname: localhost
@@ -10,8 +12,8 @@ eureka:
     lease-expiration-duration-in-seconds: 10#10秒即过期
     lease-renewal-interval-in-seconds: 5#5秒一次心跳
 
-feign:
-  hystrix:
+feign: 
+  hystrix: 
     enabled: true #开启熔断
 
 hystrix:
