@@ -35,7 +35,7 @@
           multiplier: 2 #每次重试失败后，重试间隔所增加的倍数
           max-attempts: 10 #最多重试 6 次
     datasource:
-      url: jdbc:mysql://192.168.220.110:3306/legou?characterEncoding=utf8&characterSetResults=utf8&autoReconnect=true&failOverReadOnly=false
+      url: jdbc:mysql://192.168.135.132:3306/legou?characterEncoding=utf8&characterSetResults=utf8&autoReconnect=true&failOverReadOnly=false
       username: root
       password: root
       driver-class-name: com.mysql.jdbc.Driver
