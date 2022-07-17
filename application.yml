@@ -7,7 +7,7 @@
     instance:
       hostname: localhost
       prefer-ip-address: true #当调用getHostname获取实例的hostname时，返回ip而不是host名称
-      lease-expiration-duration-in-seconds: 10#10秒即过期
+      lease-expiration-duration-in-seconds: 10  #10秒即过期
       lease-renewal-interval-in-seconds: 5#5秒一次心跳
   
   feign: 
